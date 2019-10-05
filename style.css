@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "FuturaBookC";
+  src: url(./assets/fonts/FuturaBookCRegular.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "FuturaDemiC";
+  src: url(./assets/fonts/FuturaDemiCRegular.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "FuturaMediumC";
+  src: url(./assets/fonts/FuturaMediumCRegular.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(./assets/fonts/ProximaNovaRegular.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "Yeseva One";
+  src: url(./assets/fonts/YesevaOneRegular.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 1440px;
+}
+
+@media screen and (max-width: 375px) {
+  .wrapper {
+    width: 375px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,1 @@
+For translate .scss to .css install extension "Live Sass Compile". Then push "watch" button in the bottom of VSCode screen.
