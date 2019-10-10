@@ -26,11 +26,87 @@
 * {
   margin: 0;
   padding: 0;
+
+  box-sizing: border-box;
 }
 
 .wrapper {
-  width: 1440px;
+  @media screen and (min-width: 1441px) {
+    width: 1440px;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 1440px) {
+    width: 100%;
+  }
   @media screen and (max-width: 375px) {
     width: 375px;
+  }
+}
+
+.header {
+  display: flex;
+
+  width: 100%;
+  height: 80px;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 0 5.7% 0 5.7%;
+
+  font-family: "FuturaDemic";
+  font-size: 14px;
+
+  background-color: #131313;
+
+  &--logo {
+    color: #E3B873;
+  }
+
+  &--nav {
+    flex: 2;
+    margin: 0 67px 0 67px;
+
+    font-family: "FuturaBookC";
+  }
+
+  &--list {
+    display: flex;
+
+    justify-content: space-around;
+
+    list-style-type: none;
+  }
+
+  &--list-item {
+    color: white;
+  }
+
+  &--list-item:hover {
+    color: #E3B873;
+    cursor: pointer;
+  }
+
+  &--tel {
+    color: #E3B873;
+  }
+
+  &--button {
+    height: 37px;
+    width: 161px;
+    margin-left: 45px;
+
+    font-size: 13px;
+    border: 0;
+    color: white;
+
+    background-color: #E3B873;
+  }
+
+  &--button:hover {
+    cursor: pointer;
+
+    color: grey;
+
+    background-color: white;
   }
 }

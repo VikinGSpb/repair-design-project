@@ -26,15 +26,93 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.wrapper {
-  width: 1440px;
+@media screen and (min-width: 1441px) {
+  .wrapper {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .wrapper {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 375px) {
   .wrapper {
     width: 375px;
   }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5.7% 0 5.7%;
+  font-family: "FuturaDemic";
+  font-size: 14px;
+  background-color: #131313;
+}
+
+.header--logo {
+  color: #E3B873;
+}
+
+.header--nav {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  margin: 0 67px 0 67px;
+  font-family: "FuturaBookC";
+}
+
+.header--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style-type: none;
+}
+
+.header--list-item {
+  color: white;
+}
+
+.header--list-item:hover {
+  color: #E3B873;
+  cursor: pointer;
+}
+
+.header--tel {
+  color: #E3B873;
+}
+
+.header--button {
+  height: 37px;
+  width: 161px;
+  margin-left: 45px;
+  font-size: 13px;
+  border: 0;
+  color: white;
+  background-color: #E3B873;
+}
+
+.header--button:hover {
+  cursor: pointer;
+  color: grey;
+  background-color: white;
 }
 /*# sourceMappingURL=style.css.map */
