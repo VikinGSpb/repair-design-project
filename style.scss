@@ -1,3 +1,7 @@
+$someBlack: #131313;
+$mainColor: #E3B873;
+
+
 @font-face {
   font-family: "FuturaBookC";
   src: url(./assets/fonts/FuturaBookCRegular.otf) format("truetype");
@@ -56,15 +60,15 @@
   font-family: "FuturaDemic";
   font-size: 14px;
 
-  background-color: #131313;
+  background-color: $someBlack;
 
   &--logo {
-    color: #E3B873;
+    color: $mainColor;
   }
 
   &--nav {
     flex: 2;
-    margin: 0 67px 0 67px;
+    margin: 0 4.65% 0 4.65%;
 
     font-family: "FuturaBookC";
   }
@@ -82,12 +86,12 @@
   }
 
   &--list-item:hover {
-    color: #E3B873;
+    color: $mainColor;
     cursor: pointer;
   }
 
   &--tel {
-    color: #E3B873;
+    color: $mainColor;
   }
 
   &--button {
@@ -99,7 +103,7 @@
     border: 0;
     color: white;
 
-    background-color: #E3B873;
+    background-color: $mainColor;
   }
 
   &--button:hover {
@@ -108,5 +112,316 @@
     color: grey;
 
     background-color: white;
+  }
+}
+
+main {
+
+}
+
+.calculate {
+  display: flex;
+  flex-wrap: wrap;
+
+  background-color: $someBlack;
+
+  &--instagram{
+    display: grid;
+    grid-template-columns: repeat(8, 12%);
+    grid-template-rows: repeat(6, 12%);
+
+    width: 5.7%;
+    height: 707px;
+
+    font-family: "FuturaDemiC";
+  }
+
+  &--instagram-link {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    color: $mainColor;
+    text-decoration: none;
+
+    transform: rotate(90deg);
+  }
+
+  &--instagram-line {
+    grid-column: 2 / 3;
+    margin-left: 5px;
+    grid-row: 5 / 6;
+    height: 2px;
+    width: 40px;
+    background-color: $mainColor;
+
+    transform: rotate(90deg);
+  }
+
+  &--main-container {
+    background-image: url('./assets/images/calculate.png');
+    width: 94.3%;
+    padding-left: 70px;
+
+    color: white;
+  }
+
+  &--head-container {
+    height: 100px;
+    width: 550px;
+    margin-top: 190px;
+
+    font-family: "Yeseva One";
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  &--head-colored {
+    color: $mainColor;
+  }
+
+  &--text-container {
+    width: 400px;
+    margin-top: 10px;
+
+    font-family: "FuturaBookC";
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--button-container {
+    margin-top: 40px;
+  }
+
+  &--button {
+    width: 207px;
+    height: 51px;
+    margin-right: 15px;
+
+    color: white;
+    font-family: "FuturaDemiC";
+    
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+  }
+
+  &--button:hover {
+    background: $mainColor;
+    cursor: pointer;
+  }
+
+  &--scroll-wrapper {
+    width: 247px;
+    height: 97px;
+    margin-top: -40px;
+
+    font-family: "Yeseva One";
+    font-size: 14px;
+    color: white;
+    background: $someBlack;
+  }
+
+  &--scroll {
+    display: flex;
+    padding-top: 30px;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--scroll-img {
+    margin-left: 10px;
+  }
+
+  &--scroll-wrapper:hover {
+    background: white;
+    color: gray;
+    cursor: pointer;
+  }
+}
+
+.completed-projects {
+  display: grid;
+  grid-template-areas: 
+  ". nav ."
+  "head slider slider"
+  "main slider slider";
+  grid-template-rows: 130px 184px 364px;
+  grid-template-columns: 41% 49% 10%;
+
+  height: 678px;
+
+  font-family: "Yeseva One";
+
+  background: $someBlack;
+
+  &--nav {
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--nav-text-wrapper {
+    flex: 1;
+
+    text-align: center;
+  }
+
+  &--nav-text-wrapper:hover {
+    color: $mainColor;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &--head {
+    grid-area: head;
+
+    padding-left: 15%;
+  }
+
+  &--head-wrapper {
+    display: flex;
+
+    font-size: 16px;
+    line-height: 37px;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: $mainColor;
+  }
+
+  &--head-line {
+    height: 2px;
+    width: 90px;
+    margin-top: 55px;
+
+    background-color: $mainColor;
+  }
+
+  &--text-wrapper {
+    width: 78%;
+    margin-top: 35px;
+
+    font-family: "FuturaBookC";
+    font-size: 16px;
+    line-height: 29px;
+    font-weight: 100;
+    color: white;
+  }
+
+  &--main {
+    grid-area: main;
+    margin-top: 60px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &--info-wrapper {
+    width: 43%;
+    text-align: center;
+  }
+
+  &--info-wrapper-head {
+    font-family: "Yeseva One";
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 100;
+    color: $mainColor;
+  }
+
+  &--info-wrapper-text {
+    font-family: "FuturaBookC";
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 100;
+    color: white;
+  }
+
+  &--arrows {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    margin-left: 14%;
+  }
+
+  &--arrows-left:hover,
+  &--arrows-right:hover,
+  &--circle:hover {
+    cursor: pointer;
+  }
+
+  &--circle {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 40%;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  &--circle-white {
+    background: white;
+  }
+
+  &--slider {
+    grid-area: slider;
+
+    overflow: hidden;
+
+    display: flex;
+    position: relative;
+  }
+
+  &--image-second {
+    padding-left: 3%;
+  }
+
+  &--slider-button {
+    position: absolute;
+    top: 35%;
+    left: 87%;
+  }
+
+  &--slider-button:hover {
+    cursor: pointer;
+  }
+}
+
+.online-control {
+  position: relative;
+  &--back-1{
+    height: 341px;
+    width: 100%;
+    background: $someBlack;
+    position: absolute;
+    z-index: -1;
+  }
+  &--back-2{
+    width: 100%;
+    height: 200px;
+    background: white;
+    position: absolute;
+    z-index: -1;
+    top: 342px;
+  }
+
+  &--head {
+    font-family: "Yeseva One";
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+  }
+
+  &--icon {
+    margin-top: 10px;
+  }
+
+  &--video {
+    width: 917px;
+    margin: 0 auto;
   }
 }
