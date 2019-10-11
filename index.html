@@ -108,16 +108,23 @@
           </section>
         </section>
 
-        <section class="broadcast-request">
-          <div></div>
-          <div>
-            <p></p>
+        <section class="broadcast">
+          <div class="broadcast--icon"></div>
+          <div class="broadcast--text-container">
+            <p class="broadcast--text">At each facility, a camera is installed that broadcasts the progress of work on the clock. 
+              At any time, you can go to our website and monitor the progress of work in your apartment. 
+              You can watch the live broadcast from one of our facilities!<br> Leave a request below and you will receive a link to the broadcast. </p>
           </div>
-          <form action="">
-            <input type="text">
-            <input type="tel">
-            <input type="submit">
-            <input type="checkbox">
+          <form class="broadcast--form" action="">
+            <div class="broadcast--form-label-container">
+              <label for="name">Name</label>
+              <label for="tel">Phone</label>
+            </div>
+            <input class="broadcast--form-name" id="name" type="text" placeholder="What is your name:">
+            <input class="broadcast--form-tel" id="tel" type="tel" placeholder="Your phone number:">
+            <input class="broadcast--form-button" type="submit" value="SUBMIT"><br>
+            <input class="broadcast--form-check" id="check" type="checkbox" required>
+            <label for="check">I agree to the processing of personal data </label>
           </form>
         </section>
 

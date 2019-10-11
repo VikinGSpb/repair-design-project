@@ -30,6 +30,10 @@
           box-sizing: border-box;
 }
 
+.wrapper {
+  overflow: hidden;
+}
+
 @media screen and (min-width: 1441px) {
   .wrapper {
     width: 1440px;
@@ -387,7 +391,7 @@
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: slider;
-  overflow: hidden;
+  overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -410,6 +414,7 @@
 
 .online-control {
   position: relative;
+  height: 541px;
 }
 
 .online-control--back-1 {
@@ -445,5 +450,86 @@
 .online-control--video {
   width: 917px;
   margin: 0 auto;
+}
+
+.broadcast {
+  height: 560px;
+  width: 100%;
+  text-align: center;
+  background: white;
+}
+
+.broadcast--icon {
+  width: 55px;
+  height: 2px;
+  margin: 60px auto 40px;
+  background: #E3B873;
+}
+
+.broadcast--text-container {
+  width: 681px;
+  margin: 0 auto;
+  font-family: "FuturaBookC";
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+  color: #363636;
+}
+
+.broadcast--form {
+  margin-top: 80px;
+  font-family: "FuturaBookC";
+}
+
+.broadcast--form-label-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 18.75%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 24.3%;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(54, 54, 54, 0.5);
+}
+
+.broadcast--form-name {
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+  border: none;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.5);
+}
+
+.broadcast--form-tel {
+  margin-left: 60px;
+  font-family: FuturaBookC;
+  font-size: 18px;
+  line-height: 24px;
+  color: #363636;
+  border: none;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.5);
+}
+
+.broadcast--form-button {
+  width: 200px;
+  height: 51px;
+  margin-left: 130px;
+  font-family: FuturaDemiC;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  border: none;
+  background: #E3B873;
+  color: white;
+}
+
+.broadcast--form-check {
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: 22px;
 }
 /*# sourceMappingURL=style.css.map */
