@@ -192,37 +192,50 @@
         </section>
 
         <section class="free-departure-request">
-          <section>
+          <section class="free-departure-request--picture-section">
             <figure class="free-departure-request--house-picture"><img src="./assets/images/house.png" alt="house"></figure>
             <div class="free-departure-request--circle">
               <div class="free-departure-request--circle-1">
-                <div>01</div>
-                <span>Our specialist will arrive for measurements per day contact, or appoint a date convenient for you </span>
+                <div class="free-departure-request--inside-circle">01</div>
+                <span class="free-departure-request--inside-circle-text">Our specialist will arrive for measurements per day contact, or appoint a date convenient for you </span>
               </div>
               <div class="free-departure-request--circle-2">
-                <div>02</div>
-                <span>Free metering</span>
+                <div class="free-departure-request--inside-circle">02</div>
+                <span class="free-departure-request--inside-circle-text">Free metering</span>
               </div>
               <div class="free-departure-request--circle-3">
-                <div>03</div>
-                <span>Free consultation</span>
+                <div class="free-departure-request--inside-circle">03</div>
+                <span class="free-departure-request--inside-circle-text">Free consultation</span>
               </div>
               <div class="free-departure-request--circle-4">
-                <div>04</div>
-                <span>Get a cost estimate and the timing of your future repairs</span>
+                <div class="free-departure-request--inside-circle">04</div>
+                <span class="free-departure-request--inside-circle-text">Get a cost estimate and<br> the timing of your future repairs</span>
               </div>
             </div>
           </section>
-          <section>
-            <form action="">
-              <p>Leave a request for free departure of the measurer </p>
-              <input type="text">
-              <input type="tel">
-              <input type="email">
-              <input type="checkbox">
-              <input type="submit">
-            </form>
-            <figure>
+          <section class="free-departure-request--form-section">
+            <div class="free-departure-request--form-container">
+              <div class="free-departure-request--form-text-container">
+                <p class="free-departure-request--form-text">Leave a request for free departure of the measurer </p>
+              </div>
+              <form class="free-departure-request--form" action="">
+                <div class="free-departure-request--name-container">
+                  <label for="name-2">Name</label>
+                  <input type="text" id="name-2" placeholder="What is your name">
+                </div>
+                <div class="free-departure-request--tel-container">
+                  <label for="tel-2">Phone</label>
+                  <input type="tel" id="tel-2" placeholder="Your phone number">
+                </div>
+                <div class="free-departure-request--mail-container">
+                  <label for="email-2">Email</label>
+                  <input type="email" id="email-2" placeholder="Your email">
+                </div>
+                <input type="checkbox" id="check-2" class="free-departure-request--form-checkbox"><label for="check-2">I agree to the processing of personal data</label>
+                <input type="submit" value="CALL THE MEASURER" class="free-departure-request--button">
+              </form>
+            </div>
+            <figure class="free-departure-request--foot">
               <img src="./assets/images/pig.svg" alt="pig">
               <figcaption>Help save 10 - 20% of the cost of materials</figcaption>
             </figure>
@@ -230,154 +243,159 @@
         </section>
 
         <section class="wildest-fantasies">
-          <figure><img src="./assets/images/wildestfantasies.png" alt="back"></figure>
-          <section>
-            <h2>We realize your wildest fantasies</h2>
-            <span>American classic</span>
-            <span>Empire</span>
-            <span>Classical</span>
-            <span>Loft</span>
-            <span>Minimalism</span>
-            <span>Provence</span>
-            <span>Romanticism</span>
-            <span>Scandinavian style</span>
-            <span>Mediterranean style </span>
-            <span>High tech</span>
-            <span>Eclecticism</span>
+          <section class="wildest-fantasies--list-container">
+            <div class="wildest-fantasies--list-head"><span>We realize your wildest fantasies</span></div>
+            <ul class="wildest-fantasies--list">
+              <li class="wildest-fantasies--list-item">American classic</li>
+              <li class="wildest-fantasies--list-item">Empire</li>
+              <li class="wildest-fantasies--list-item">Classical</li>
+              <li class="wildest-fantasies--list-item">Loft</li>
+              <li class="wildest-fantasies--list-item">Minimalism</li>
+              <li class="wildest-fantasies--list-item">Provence</li>
+              <li class="wildest-fantasies--list-item">Romanticism</li>
+              <li class="wildest-fantasies--list-item">Scandinavian style</li>
+              <li class="wildest-fantasies--list-item">Mediterranean style </li>
+              <li class="wildest-fantasies--list-item">High tech</li>
+              <li class="wildest-fantasies--list-item">Eclecticism</li>
+            </ul>
           </section>
-          <section>
-            <figure><img src="./assets/images/wildestfantasies1.png" alt="1"></figure>
-            <figure><img src="./assets/images/wildestfantasies2.png" alt="2"></figure>
-            <figure><img src="./assets/images/wildestfantasies3.png" alt="3"></figure>
-            <figure><img src="./assets/images/wildestfantasies4.png" alt="4"></figure>
+          <section class="wildest-fantasies--photo-container">
+            <figure class="wildest-fantasies--photo-1"><img src="./assets/images/wildestfantasies1.png" alt="1"></figure>
+            <figure class="wildest-fantasies--photo-2"><img src="./assets/images/wildestfantasies2.png" alt="2"></figure>
+            <figure class="wildest-fantasies--photo-3"><img src="./assets/images/wildestfantasies3.png" alt="3"></figure>
+            <figure class="wildest-fantasies--photo-4"><img src="./assets/images/wildestfantasies4.png" alt="4"></figure>
           </section>
         </section>
 
         <section class="design-projects">
-          <section>
-            <h2>DESIGN PROJECT</h2>
-            <figure><img src="./assets/images/design.svg" alt="design"></figure>
-            <p>Design project not only helps to make the repair of your apartment more modern, but also significantly reduces the cost of materials and reduces the time of repair work.</p>
+          <section class="design-projects--head">
+            <span class="design-projects--head-text">DESIGN PROJECT</span>
+            <figure class="design-projects--head-icon"><img src="./assets/images/design.svg" alt="design"></figure>
+            <div class="design-projects--head-paragraph">
+              <p>Design project not only helps to make the repair of your apartment more modern, <br>but also significantly reduces the cost of materials and reduces the time of repair work.</p>
+            </div>
           </section>
-          <section>
-            <div>
-              <figure>
+          <section class="design-projects--content">
+            <div class="design-projects--column">
+              <figure class="design-projects--image">
                 <img src="./assets/images/designproject1.png" alt="1">
               </figure>
-              <div>
-                <h3>Mini</h3>
-                <ul>
-                  <li>Measurement drawing</li>
-                  <li>Redevelopment</li>
-                  <li>Layout of furniture</li>
-                  <li>Plumbing plan. equipment</li>
+              <div class="design-projects--list-container-1">
+                <span class="design-projects--text">Mini</span>
+                <ul class="design-projects--list">
+                  <li class="design-projects--list-item">Measurement drawing</li>
+                  <li class="design-projects--list-item">Redevelopment</li>
+                  <li class="design-projects--list-item">Layout of furniture</li>
+                  <li class="design-projects--list-item">Plumbing plan. equipment</li>
                 </ul>
               </div>
-              <div>
-                150 RUB / M2
+              <div class="design-projects--price-1">
+                <span>150 RUB / M2</span>
               </div>
             </div>
-            <div>
-              <figure>
+            <div class="design-projects--column">
+              <figure class="design-projects--image">
                 <img src="./assets/images/designproject2.png" alt="2">
               </figure>
-              <div>
-                <h3>Standard</h3>
-                <ul>
-                  <li>Measurement drawing</li>
-                  <li>Redevelopment</li>
-                  <li>Layout of furniture</li>
-                  <li>Plan of ceilings</li>
-                  <li>Floor Plan</li>
-                  <li>Electricians plan</li>
-                  <li>Lighting plan</li>
+              <div class="design-projects--list-container-2"> 
+                <span class="design-projects--text">Standard</span>
+                <ul class="design-projects--list">
+                  <li class="design-projects--list-item">Measurement drawing</li>
+                  <li class="design-projects--list-item">Redevelopment</li>
+                  <li class="design-projects--list-item">Layout of furniture</li>
+                  <li class="design-projects--list-item">Plan of ceilings</li>
+                  <li class="design-projects--list-item">Floor Plan</li>
+                  <li class="design-projects--list-item">Electricians plan</li>
+                  <li class="design-projects--list-item">Lighting plan</li>
                 </ul>
               </div>
-              <div>400 RUB / M2</div>
+              <div class="design-projects--price-2"><span>400 RUB / M2</span></div>
             </div>
-            <div>
-              <figure>
+            <div class="design-projects--column">
+              <figure class="design-projects--image">
                 <img src="./assets/images/designproject3.png" alt="3">
               </figure>
-              <div>
-                <h3>Full</h3>
-                <ul>
-                  <li>Measurement drawing</li>
-                  <li>Redevelopment</li>
-                  <li>Layout of furniture</li>
-                  <li>Plan of ceilings</li>
-                  <li>Floor Plan</li>
-                  <li>Electricians plan</li>
-                  <li>Lighting plan</li>
-                  <li>Wall reamers</li>
-                  <li>3D visualization</li>
-                  <li>Bill of materials</li>
-                  <li>Departure for a selection of materials</li>
-                  <li>Furniture selection</li>
+              <div class="design-projects--list-container-3">
+                <span class="design-projects--text">Full</span>
+                <ul class="design-projects--list">
+                  <li class="design-projects--list-item">Measurement drawing</li>
+                  <li class="design-projects--list-item">Redevelopment</li>
+                  <li class="design-projects--list-item">Layout of furniture</li>
+                  <li class="design-projects--list-item">Plan of ceilings</li>
+                  <li class="design-projects--list-item">Floor Plan</li>
+                  <li class="design-projects--list-item">Electricians plan</li>
+                  <li class="design-projects--list-item">Lighting plan</li>
+                  <li class="design-projects--list-item">Wall reamers</li>
+                  <li class="design-projects--list-item">3D visualization</li>
+                  <li class="design-projects--list-item">Bill of materials</li>
+                  <li class="design-projects--list-item">Departure for a selection of materials</li>
+                  <li class="design-projects--list-item">Furniture selection</li>
                 </ul>
               </div>
-              <div>900 RUB / M2</div>
+              <div class="design-projects--price-3"><span>900 RUB / M2</span></div>
             </div>
           </section>
         </section>
 
         <section class="working">
           <div class="working--head">
-            <h3 class="working--head-header">How we are working</h3>
-            <span class="working--head-text">6 steps to the goal</span>
+            <span class="working--head-header">HOW WE ARE WORKING</span>
+            <span class="working--head-text">6 STEPS TO<br>THE GOAL</span>
+            <div class="working--head-line"></div>
           </div>
           <div class="working--steps">
             <ul class="working--list">
               <li class="working--step">
-                <h3 class="working--step-head">01</h3>
-                <span class="working--step-text">Departure to room measurements</span>
+                <span class="working--step-head">01</span>
+                <span class="working--step-text"><br>Departure to<br> room measurements</span>
               </li>
               <li class="working--step">
-                <h3 class="working--step-head">02</h3>
-                <span class="working--step-text">Compilation estimates</span>
+                <span class="working--step-head">02</span>
+                <span class="working--step-text"><br>Compilation<br> estimates</span>
               </li>
               <li class="working--step">
-                <h3 class="working--step-head">03</h3>
-                <span class="working--step-text">Development project design</span>
+                <span class="working--step-head">03</span>
+                <span class="working--step-text"><br>Development<br> project design</span>
               </li>
               <li class="working--step">
-                  <h3 class="working--step-head">04</h3>
-                  <span class="working--step-text">Purchasing Supplies</span>
+                  <span class="working--step-head">04</span>
+                  <span class="working--step-text"><br>Purchasing Supplies</span>
               </li>
               <li class="working--step">
-                  <h3 class="working--step-head">05</h3>
-                  <span class="working--step-text">Repair finishing work</span>
+                  <span class="working--step-head">05</span>
+                  <span class="working--step-text"><br>Repair finishing work</span>
               </li>
               <li class="working--step">
-                  <h3 class="working--step-head">06</h3>
-                  <span class="working--step-text">Приемка-сдача работ</span>
+                  <span class="working--step-head">06</span>
+                  <span class="working--step-text"><br>Приемка-сдача<br> работ</span>
               </li>
             </ul>
           </div>
           <div class="working--text-container">
-            <span class="text-container--number">1/6</span>
-            <span class="text-container--step-text">Departure for measurements premises</span>
-            <p class="text-container--text">After your call, we go to you to consult and measure the premises of your apartment. During our meeting, you can ask absolutely any number of questions. 
-              An appraiser-appraiser leaves to measure the room. 
-              He will advise you on the issues of repair technology, apartment design, terms of repair of the apartment as a whole and its individual stages. </p>
+            <div class="working--text-container-number"><span>1/6</span></div>
+            <div class="working--text-container-step-text"><span>DEPARTURE FOR MEASUREMENTS PREMISES</span></div>
+            <div class="working--text-container-text"><p>After your call, we go to you to consult and measure the premises of your apartment. During our meeting, 
+              you can ask absolutely any number of questions. An<br> appraiser-appraiser leaves to measure the room. <br><br>
+              He will advise you on the issues of repair technology, apartment design, terms of repair of the apartment as a whole and its individual stages. </p></div>
+            <div class="working--arrows">
+              <figure class="working--arrows-fig">
+                <img src="./assets/images/left.svg" alt="left">
+                <div class="working--circle"></div>
+                <div class="working--circle"></div>
+                <div class="working--circle"></div>
+                <div class="working--circle"></div>
+                <div class="working--circle"></div>
+                <div class="working--circle"></div>
+                <img src="./assets/images/right.svg" alt="right">
+              </figure>
+            </div>
           </div>
           <div class="working--picture">
             <figure>
               <img src="./assets/images/sixsteps.png" alt="picture">
             </figure>
           </div>
-          <div class="working--arrows">
-            <figure>
-              <img src="./assets/images/left.svg" alt="left">
-              <div class="arrows--circle arrows--circle-active"></div>
-              <div class="arrows--circle"></div>
-              <div class="arrows--circle"></div>
-              <div class="arrows--circle"></div>
-              <div class="arrows--circle"></div>
-              <div class="arrows--circle"></div>
-              <img src="./assets/images/right.svg" alt="right">
-            </figure>
-          </div>
+          
         </section>
 
         <section class="team">
