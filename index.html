@@ -116,15 +116,19 @@
               You can watch the live broadcast from one of our facilities!<br> Leave a request below and you will receive a link to the broadcast. </p>
           </div>
           <form class="broadcast--form" action="">
-            <div class="broadcast--form-label-container">
+            <div class="broadcast--form-name">
               <label for="name">Name</label>
-              <label for="tel">Phone</label>
+              <input  id="name" type="text" placeholder="What is your name:">
             </div>
-            <input class="broadcast--form-name" id="name" type="text" placeholder="What is your name:">
-            <input class="broadcast--form-tel" id="tel" type="tel" placeholder="Your phone number:">
+            <div class="broadcast--form-tel">
+              <label for="tel">Phone</label>
+              <input  id="tel" type="tel" placeholder="Your phone number:">
+            </div>
             <input class="broadcast--form-button" type="submit" value="SUBMIT"><br>
-            <input class="broadcast--form-check" id="check" type="checkbox" required>
-            <label for="check">I agree to the processing of personal data </label>
+            <div class="broadcast--form-check">
+              <input id="check" type="checkbox" required>
+              <label for="check">I agree to the processing of personal data </label>
+            </div>
           </form>
         </section>
 
@@ -546,52 +550,67 @@
         </section>
 
         <section class="questions">
-          <form action="">
-            <h3>have any questions?</h3>
-            <input type="text">
-            <input type="tel">
-            <input type="text">
-            <input type="checkbox">
-            <input type="submit">
+          <form class="questions--form" action="">
+            <div class="questions--form-container">
+              <div class="questions--title-text"><span>HAVE ANY QUESTIONS?</span></div>
+              <div class="questions--name">
+                <label class="questions--text" for="q-name">Name</label>
+                <input type="text" id="q-name" placeholder="What is your name:">
+              </div>
+              <div class="questions--tel">
+                <label class="questions--text" for="q-tel">Phone</label>
+                <input type="tel" id="q-tel" placeholder="Your phone number:">
+              </div>
+              <div class="questions--question">
+                <label class="questions--text" for="q-question">Question</label>
+                <input type="text" id="q-question" placeholder="I want to know:">
+              </div>
+              <div class="questions--check">
+                <input type="checkbox" id="check-3">
+                <label for="check-3">I agree to the processing of personal data</label>
+              </div>
+              <input type="submit" class="questions--button" value="SUBMIT">
+            </div>
           </form>
         </section>
 
-        <section class="contacts">
-          <div class="contacts--text">
-            <p>Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel +7 (928) 768 32 29</p>
-          </div>
-          <div class="contacts--icons">
-            <figure><img src="./assets/images/mail.svg" alt="mail"></figure>
-            <figure><img src="./assets/images/insta.svg" alt="inst"></figure>
-          </div>
-        </section>
-
-        <section class="map">
-          <figure class="map--figure">
-            <img src="./assets/images/map.png" alt="map">
-          </figure>
-        </section>
-      </main>
-      <footer class="footer">
-          <div class="footer--nav-container">
-            <div class="footer--logo">
-              <span>IC "REPAIR DESIGN PROJECT"</span>
+        <div class="background-wrapper">
+          <section class="contacts">
+            <div class="contacts--text">
+              <p>Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel +7 (928) 768 32 29</p>
             </div>
-            <h1></h1>
-            <nav class="footer--nav">
-              <ul class="footer--list">
-                <li class="footer--list-item">HOME</li>
-                <li class="footer--list-item">PROJECTS</li>
-                <li class="footer--list-item">MEASUREMENT</li>
-                <li class="footer--list-item">TEAM</li>
-                <li class="footer--list-item">REVIEWS</li>
-                <li class="footer--list-item">CONTACTS</li>
-              </ul>
-            </nav>
-            <a class="footer--tel" href="tel:+79287683239">+7(928)768-32-39</a>
-            <button class="footer--button">REQUEST A CALL</button>
-          </div>
-        </footer>
-    </div>
+            <div class="contacts--icons">
+              <figure><img src="./assets/images/mail.svg" alt="mail"></figure>
+              <figure><img src="./assets/images/insta.svg" alt="inst"></figure>
+            </div>
+          </section>
+
+          <section class="map">
+            <figure class="map--figure">
+              <img src="./assets/images/map.png" alt="map">
+            </figure>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer--logo">
+          <span class="footer--logo-text">IC "REPАIR DESIGN PROJECT"</span>
+        </div>
+        <h1 class="footer--head"></h1>
+        <nav class="footer--nav">
+          <ul class="footer--list">
+            <li class="footer--list-item">HOME</li>
+            <li class="footer--list-item">PROJECTS</li>
+            <li class="footer--list-item">MEASUREMENT</li>
+            <li class="footer--list-item">TEAM</li>
+            <li class="footer--list-item">REVIEWS</li>
+            <li class="footer--list-item">CONTACTS</li>
+          </ul>
+        </nav>
+        <a class="footer--tel" href="tel:+79287683239">+7(928)768-32-39</a>
+        <button class="footer--button">REQUEST A CALL</button>
+      </footer>
+
   </body>
 </html>
