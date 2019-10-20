@@ -906,8 +906,29 @@
 
 .broadcast--form-check {
   margin: 40px auto 0;
+  padding-left: 20px;
   font-size: 16px;
   line-height: 22px;
+  position: relative;
+}
+
+.broadcast--form-check input {
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.broadcast--form-check input:checked + .broadcast--checkbox {
+  background-image: url("./assets/images/checked.svg");
+}
+
+.broadcast--checkbox {
+  position: absolute;
+  margin-left: -20px;
+  width: 1em;
+  height: 1em;
+  background-image: url(./assets/images/notChecked.svg);
 }
 
 @media screen and (max-width: 960px) {
@@ -1401,10 +1422,30 @@
 
 .free-departure-request--form-checkbox {
   margin-top: 25px;
+  padding-left: 20px;
   font-family: "FuturaBookC";
   font-size: 16px;
   line-height: 22px;
   color: white;
+}
+
+.free-departure-request--form-checkbox input {
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.free-departure-request--form-checkbox input:checked + .free-departure-request--checkbox {
+  background-image: url("./assets/images/checked.svg");
+}
+
+.free-departure-request--checkbox {
+  position: absolute;
+  margin-left: -20px;
+  width: 1em;
+  height: 1em;
+  background-image: url(./assets/images/notChecked.svg);
 }
 
 .free-departure-request--button {
@@ -2680,9 +2721,29 @@
   width: 486px;
   margin: 0 auto;
   text-align: center;
+  padding-left: 20px;
   font-family: "FuturaBookC";
   font-size: 16px;
   line-height: 22px;
+}
+
+.questions--check input {
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.questions--check input:checked + .questions--checkbox {
+  background-image: url("./assets/images/checked.svg");
+}
+
+.questions--checkbox {
+  position: absolute;
+  margin-left: -20px;
+  width: 1em;
+  height: 1em;
+  background-image: url(./assets/images/notChecked.svg);
 }
 
 .questions--button {
@@ -2738,8 +2799,8 @@
   }
   .questions--check {
     width: 100%;
+    margin-top: 10px;
     text-align: start;
-    line-height: 80px;
   }
   .questions--tel {
     margin-left: 0;

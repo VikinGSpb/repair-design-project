@@ -924,9 +924,29 @@ $mainColor: #E3B873;
 
   &--form-check {
     margin: 40px auto 0;
+    padding-left: 20px;
 
     font-size: 16px;
     line-height: 22px;
+
+    position: relative;
+  }
+
+  &--form-check input {
+    position: absolute;
+    appearance: none;
+  }
+
+  &--form-check input:checked + &--checkbox {
+    background-image: url('./assets/images/checked.svg');
+  }
+
+  &--checkbox {
+    position: absolute;
+    margin-left: -20px;
+    width: 1em;
+    height: 1em;
+    background-image: url(./assets/images/notChecked.svg);
   }
 
   @media screen and (max-width: 960px) {
@@ -1420,11 +1440,29 @@ $mainColor: #E3B873;
 
   &--form-checkbox {
     margin-top: 25px;
+    padding-left: 20px;
 
     font-family:"FuturaBookC";
     font-size: 16px;
     line-height: 22px;
     color: white;
+  }
+
+  &--form-checkbox input {
+    position: absolute;
+    appearance: none;
+  }
+
+  &--form-checkbox input:checked + &--checkbox {
+    background-image: url('./assets/images/checked.svg');
+  }
+
+  &--checkbox {
+    position: absolute;
+    margin-left: -20px;
+    width: 1em;
+    height: 1em;
+    background-image: url(./assets/images/notChecked.svg);
   }
 
   &--button {
@@ -2742,10 +2780,28 @@ $mainColor: #E3B873;
     width: 486px;
     margin: 0 auto;
     text-align: center;
+    padding-left: 20px;
 
     font-family: "FuturaBookC";
     font-size: 16px;
     line-height: 22px;
+  }
+
+  &--check input {
+    position: absolute;
+    appearance: none;
+  }
+
+  &--check input:checked + &--checkbox {
+    background-image: url('./assets/images/checked.svg');
+  }
+
+  &--checkbox {
+    position: absolute;
+    margin-left: -20px;
+    width: 1em;
+    height: 1em;
+    background-image: url(./assets/images/notChecked.svg);
   }
 
   &--button {
@@ -2803,8 +2859,8 @@ $mainColor: #E3B873;
 
     &--check {
       width: 100%;
+      margin-top: 10px;
       text-align: start;
-      line-height: 80px;
     }
 
     &--tel {
