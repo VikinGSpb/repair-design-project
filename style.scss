@@ -1,3 +1,7 @@
+$someBlack: #131313;
+$mainColor: #e3b873;
+
+
 @font-face {
   font-family: "FuturaBookC";
   src: url(./assets/fonts/FuturaBookCRegular.otf) format("truetype");
@@ -26,11 +30,3210 @@
 * {
   margin: 0;
   padding: 0;
+
+  box-sizing: border-box;
 }
 
 .wrapper {
-  width: 1440px;
-  @media screen and (max-width: 375px) {
-    width: 375px;
+  overflow: hidden;
+  @media screen and (min-width: 1441px) {
+    width: 1440px;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 1440px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 475px) {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.header {
+  display: flex;
+
+  width: 100%;
+  height: 80px;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 0 5.7% 0 5.7%;
+
+  font-family: "FuturaDemic";
+  font-size: 14px;
+
+  background-color: $someBlack;
+
+  &--logo {
+    color: $mainColor;
+  }
+
+  &--nav {
+    flex: 2;
+    margin: 0 4.65% 0 4.65%;
+
+    font-family: "FuturaBookC";
+  }
+
+  &--list {
+    display: flex;
+
+    justify-content: space-around;
+
+    list-style-type: none;
+  }
+
+  &--list-item {
+    color: white;
+  }
+
+  &--list-item:hover {
+    color: $mainColor;
+    cursor: pointer;
+  }
+
+  &--tel {
+    color: $mainColor;
+  }
+
+  &--button {
+    height: 37px;
+    width: 161px;
+    margin-left: 45px;
+
+    font-size: 13px;
+    border: 0;
+    color: white;
+
+    background-color: $mainColor;
+  }
+
+  &--button:hover {
+    cursor: pointer;
+
+    color: grey;
+
+    background-color: white;
+  }
+
+  @media screen and (max-width: 1100px) {
+    &--list {
+      justify-content: space-between;
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    &--button {
+    display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &--nav {
+      display: none;
+    }
+
+    &--button {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    &--button {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 475px) {
+    &--nav,
+    &--button {
+      display: none;
+    }
+
+    &--tel {
+      font-size: 12px;
+      line-height: 14px;
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.calculate {
+  display: flex;
+  flex-wrap: wrap;
+
+  background-color: $someBlack;
+
+  &--instagram{
+    display: grid;
+    grid-template-columns: repeat(8, 12%);
+    grid-template-rows: repeat(6, 12%);
+
+    width: 5.7%;
+    height: 707px;
+
+    font-family: "FuturaDemiC";
+  }
+
+  &--instagram-link {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    color: $mainColor;
+    text-decoration: none;
+
+    transform: rotate(90deg);
+  }
+
+  &--instagram-link:hover {
+    color: rgba(227, 184, 115, 0.5);
+    cursor: pointer;
+  }
+
+  &--instagram-line {
+    grid-column: 2 / 3;
+    margin-left: 5px;
+    grid-row: 5 / 6;
+    height: 2px;
+    width: 40px;
+    background-color: $mainColor;
+
+    transform: rotate(90deg);
+  }
+
+  &--main-container {
+    background-image: url('./assets/images/calculate.png');
+    width: 94.3%;
+    padding-left: 70px;
+
+    color: white;
+  }
+
+  &--head-container {
+    height: 100px;
+    width: 550px;
+    margin-top: 190px;
+
+    font-family: "Yeseva One";
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  &--head-colored {
+    color: $mainColor;
+  }
+
+  &--text-container {
+    width: 400px;
+    margin-top: 10px;
+
+    font-family: "FuturaBookC";
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--button-container {
+    margin-top: 40px;
+  }
+
+  &--button {
+    width: 207px;
+    height: 51px;
+    margin-right: 15px;
+
+    color: white;
+    font-family: "FuturaDemiC";
+    
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+  }
+
+  &--button:hover {
+    background: $mainColor;
+    cursor: pointer;
+  }
+
+  &--scroll-wrapper {
+    width: 247px;
+    height: 97px;
+    margin-top: -40px;
+
+    font-family: "Yeseva One";
+    font-size: 14px;
+    color: white;
+    background: $someBlack;
+  }
+
+  &--scroll {
+    display: flex;
+    padding-top: 30px;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--scroll-img {
+    margin-left: 10px;
+  }
+
+  &--scroll-wrapper:hover {
+    background: white;
+    color: gray;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    &--instagram,
+    &--scroll-wrapper {
+      display: none;
+    }
+
+    &--main-container {
+      width: 100%;
+    }
+
+    &--head-container {
+      font-size: 30px;
+      width: 90%;
+    }
+
+    &--text-container {
+      font-size: 18px;
+    }
+
+    &--main-container {
+      padding-left: 10px;
+    }
+
+    &--button {
+      margin-right: 5px;
+    }
+  }
+
+  @media screen and (max-width: 475px) {
+    width: 100%;
+    height: 476px;
+
+    background: url(./assets/images/calculatemobile.svg);
+    background-color: $someBlack;
+
+    &--instagram,
+    &--scroll-wrapper {
+      display: none;
+    }
+
+    &--button {
+      width: 95%;
+      margin-bottom: 20px;
+    }
+
+    &--button-container {
+      margin-top: 20px;
+    }
+
+    &--main-container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 0;
+
+      text-align: start;
+
+      background: none;
+    }
+
+    &--head-container {
+      width: 90%;
+      margin: 25% 0 0 0;
+    }
+
+    &--head-container {
+      font-size: 23px;
+      line-height: 31px;
+    }
+
+    &--text-container {
+      width: 85%;
+      margin-top: 0;
+
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 100;
+      text-align: start;
+    }
+  }
+}
+
+.completed-projects {
+  width: 100%;
+  display: grid;
+  grid-template-areas: 
+  ". nav ."
+  "head slider slider"
+  "main slider slider";
+  grid-template-rows: 130px 184px 364px;
+  grid-template-columns: 41% 49% 10%;
+
+  height: 678px;
+
+  font-family: "Yeseva One";
+
+  background: $someBlack;
+
+  &--mobile-slider {
+    display: none;
+  }
+
+  &--nav {
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--nav-text-wrapper {
+    flex: 1;
+
+    text-align: center;
+  }
+
+  &--nav-text-wrapper:hover {
+    color: $mainColor;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &--head {
+    grid-area: head;
+
+    padding-left: 15%;
+  }
+
+  &--head-wrapper {
+    display: flex;
+
+    font-size: 16px;
+    line-height: 37px;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: $mainColor;
+  }
+
+  &--head-line {
+    height: 2px;
+    width: 90px;
+    margin-top: 55px;
+
+    background-color: $mainColor;
+  }
+
+  &--text-wrapper {
+    width: 78%;
+    margin-top: 35px;
+
+    font-family: "FuturaBookC";
+    font-size: 16px;
+    line-height: 29px;
+    font-weight: 100;
+    color: white;
+  }
+
+  &--main {
+    grid-area: main;
+    margin-top: 60px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &--info-wrapper {
+    width: 43%;
+    text-align: center;
+  }
+
+  &--info-wrapper-head {
+    font-family: "Yeseva One";
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 100;
+    color: $mainColor;
+  }
+
+  &--info-wrapper-text {
+    font-family: "FuturaBookC";
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 100;
+    color: white;
+  }
+
+  &--arrows {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    margin-left: 14%;
+  }
+
+  &--arrows-left:hover,
+  &--arrows-right:hover {
+    cursor: pointer;
+    transform: skew(15deg);
+    transition: 1s linear;
+  }
+
+  &--circle {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 40%;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  &--circle:hover {
+    background: white;
+    cursor: pointer;
+  }
+
+  &--slider {
+    grid-area: slider;
+
+    overflow-x: hidden;
+
+    display: flex;
+    position: relative;
+  }
+
+  &--image-second {
+    padding-left: 3%;
+  }
+
+  &--slider-button {
+    position: absolute;
+    top: 35%;
+    left: 87%;
+  }
+
+  &--slider-button:hover {
+    cursor: pointer;
+    transition: 1s linear;
+    transform: rotate(360deg);
+  }
+
+  @media screen and (max-width: 960px) {
+    &--head-line,
+    &--arrows {
+      display: none;
+    }
+
+    &--main {
+      margin-top: 100px;
+    }
+
+    &--nav {
+      width: 120%;
+      justify-content: space-between;
+    }
+
+    &--slider-button {
+      left: 84%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    height: 740px;
+
+    &--head {
+      margin: 0 auto;
+    }
+
+    &--head-wrapper {
+      width: 70%;
+      margin: 60px auto 0;
+      padding-left: 20%;
+      text-align: center;
+    }
+
+    &--text-wrapper {
+      width: 60%;
+      margin: 20px auto;
+    }
+
+    &--mobile-slider {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    &--mobile-image {
+      padding-left: 15%;
+      position: relative;
+      z-index: 2;
+    }
+
+    &--mobile-left {
+      position: absolute;
+      z-index: 5;
+      top: 100px;
+      left: 0px;
+    }
+
+    &--mobile-right {
+      position: absolute;
+      z-index: 5;
+      top: 100px;
+      left: 350px;
+    }
+
+    &--mobile-left:hover,
+    &--mobile-right:hover {
+      cursor: pointer;
+      transition: 1s linear;
+      transform: rotate(360deg);
+    }
+
+    &--main {
+      margin: 0 auto;
+      padding-left: 120px;
+    }
+
+    &--nav,
+    &--slider{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 475px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    height: 731px;
+
+    &--nav,
+    &--arrows,
+    &--slider,
+    &--head-line {
+      display: none;
+    }
+
+    &--head {
+      margin: 0 auto;
+      padding: 0;
+      width: 83%;
+      text-align: center;
+
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    &--head-wrapper {
+      width: 90%;
+      margin: 60px auto 0;
+      padding-left: 20%;
+    }
+
+    &--text-wrapper {
+      width: 100%;
+
+      text-align: center;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    &--mobile-slider {
+      display: block;
+      position: relative;
+    }
+
+    &--mobile-image {
+      padding-left: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    &--mobile-left {
+      position: absolute;
+      z-index: 5;
+      top: 100px;
+      left: 10px;
+    }
+
+    &--mobile-right {
+      position: absolute;
+      z-index: 5;
+      top: 100px;
+      left: 290px;
+    }
+
+    &--mobile-left:hover,
+    &--mobile-right:hover {
+      cursor: pointer;
+    }
+    
+    &--main {
+      margin-top: 0;
+      padding-left: 0;
+    }
+
+    &--info-wrapper {
+      text-align: start;
+      padding-left: 20px;
+    }
+
+    &--info-wrapper-head {
+      font-size: 14px;
+      line-height: 19px;
+      text-align: start;
+    }
+
+    &--info-wrapper-text {
+      font-size: 14px;
+      line-height: 19px;
+      text-align: start;
+    }
+  }
+}
+
+.online-control {
+  position: relative;
+  height: 541px;
+  &--back-1{
+    height: 341px;
+    width: 100%;
+    background: $someBlack;
+    position: absolute;
+    top: -1px;
+    z-index: -1;
+  }
+  &--back-2{
+    width: 100%;
+    height: 200px;
+    background: white;
+    position: absolute;
+    z-index: -1;
+    top: 342px;
+  }
+
+  &--head {
+    font-family: "Yeseva One";
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+  }
+
+  &--icon {
+    margin-top: 10px;
+  }
+
+  &--video {
+    width: 917px;
+    margin: 0 auto;
+  }
+
+  &--video video:last-child {
+    display: none;
+  }
+
+  @media screen and (max-width: 1060px) {
+    height: 510px;
+
+    &--video {
+      width: 90%;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    &--video video:first-child {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 430px;
+
+    &--video {
+      width: 100%;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    &--back-1 {
+      top: -101px;
+    }
+
+    &--head {
+      margin-top: 100px;
+    }
+
+    &--video video:first-child {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 475px) {
+    height: 368px;
+    padding-top: 40px;
+
+    background: $someBlack;
+
+    &--back-1,
+    &--back-2,
+    &--video video:first-child {
+      display: none;
+    }
+
+    &--head {
+      margin-top: 0px;
+    }
+
+    &--video {
+      margin: 35px 0 0 0;
+      padding-left: 17px;
+    }
+
+    &--video video:last-child {
+      display: block;
+    }
+  }
+}
+
+.broadcast {
+  height: 560px;
+  width: 100%;
+
+  text-align: center;
+
+  background: white;
+
+  &--icon {
+    width: 55px;
+    height: 2px;
+    margin: 60px auto 40px;
+
+    background: $mainColor;
+  }
+
+  &--text-container {
+    width: 681px;
+    margin: 0 auto;
+
+    font-family: "FuturaBookC";
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+
+    color: #363636;
+  }
+
+  &--form {
+    display: flex; 
+    flex-wrap: wrap;
+
+    margin: 80px auto 0;
+    width: 830px;
+
+    font-family: "FuturaBookC";
+  }
+  
+  &--form-name {
+    display: flex;
+    flex-direction: column;
+
+    width: 260px;
+
+    text-align: start;
+    font-family: "FuturaBookC";
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(54, 54, 54, 0.5);
+  }
+
+  &--form-name input {
+    font-family: "FuturaBookC";
+    font-size: 18px;
+    line-height: 24px;
+    color: #363636;
+    border: none;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.5);
+  }
+
+  &--form-tel {
+    display: flex;
+    flex-direction: column;
+
+    width: 260px;
+    margin-left: 60px;
+
+    text-align: start;
+    font-family: "FuturaBookC";
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(54, 54, 54, 0.5);
+  }
+
+  &--form-tel input {
+    font-family: "FuturaBookC";
+    font-size: 18px;
+    line-height: 24px;
+    color: #363636;
+    border: none;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.5);
+  }
+
+  &--form-name input::-webkit-input-placeholder {
+    font-size: 18px;
+    line-height: 24px;
+    color: #363636;
+  } 
+
+  &--form-name input::-moz-placeholder {
+    font-size: 18px;
+    line-height: 24px;
+    color: #363636;
+  }
+
+  &--form-tel input::-webkit-input-placeholder {
+    font-size: 18px;
+    line-height: 24px;
+    color: #363636;
+  } 
+
+  &--form-tel input::-moz-placeholder {
+    font-size: 18px;
+    line-height: 24px;
+    color: #363636;
+  }
+
+  &--form-button {
+    width: 200px;
+    height: 51px;
+    margin-left: 50px;
+
+    font-family: FuturaDemiC;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: center;
+    border: none;
+
+    background: $mainColor;
+    color: white;
+  }
+
+  &--form-button:hover {
+    cursor: pointer;
+    color: $someBlack;
+  }
+
+  &--form-check {
+    margin: 40px auto 0;
+    padding-left: 20px;
+
+    font-size: 16px;
+    line-height: 22px;
+
+    position: relative;
+  }
+
+  &--form-check input {
+    position: absolute;
+    appearance: none;
+  }
+
+  &--form-check input:checked + &--checkbox {
+    background-image: url('./assets/images/checked.svg');
+  }
+
+  &--checkbox {
+    position: absolute;
+    margin-left: -20px;
+    width: 1em;
+    height: 1em;
+    background-image: url(./assets/images/notChecked.svg);
+  }
+
+  @media screen and (max-width: 960px) {
+    &--form {
+      width: 100%;
+      justify-content: space-around;
+    }
+
+    &--form-tel {
+      margin-left: 0px;
+    }
+
+    &--form-button {
+      margin-top: 20px;
+      margin-left: 65px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &--text-container {
+      width: 90%;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  @media screen and (max-width: 475px) {
+    height: 505px;
+    margin-top: -60px;
+    padding-top: 15px;
+
+    color: white;
+    
+    background: $someBlack;
+
+    &--text-container {
+      width: 90%;
+
+      font-size: 14px;
+      line-height: 24px;
+      color: white;
+    }
+
+    &--icon {
+      margin: 60px auto 20px;
+    }
+
+    &--form {
+      display: flex; 
+      flex-wrap: wrap;
+      position: relative;
+  
+      margin: 20px auto 0;
+      width: 90%;
+  
+      font-family: "FuturaBookC";
+    }
+
+    &--form-name {
+      display: flex;
+      flex-direction: column;
+  
+      width: 100%;
+  
+      text-align: start;
+      font-family: "FuturaBookC";
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 100;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  
+    &--form-name input {
+      font-family: "FuturaBookC";
+      font-size: 18px;
+      line-height: 24px;
+      color: white;
+      border: none;
+      border-bottom: 1px solid white;
+      background: $someBlack;
+    }
+  
+    &--form-tel {
+      display: flex;
+      flex-direction: column;
+  
+      width: 100%;
+      margin: 45px 0 0 0;
+  
+      text-align: start;
+      font-family: "FuturaBookC";
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 100;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  
+    &--form-tel input {
+      font-family: "FuturaBookC";
+      font-size: 18px;
+      line-height: 24px;
+      color: white;
+      border: none;
+      border-bottom: 1px solid white;
+      background: $someBlack;
+    }
+  
+    &--form-name input::-webkit-input-placeholder {
+      font-size: 18px;
+      line-height: 25px;
+      color: white;
+    } 
+  
+    &--form-name input::-moz-placeholder {
+      font-size: 18px;
+      line-height: 25px;
+      color: white;
+    }
+  
+    &--form-tel input::-webkit-input-placeholder {
+      font-size: 18px;
+      line-height: 25px;
+      color: white;
+    } 
+  
+    &--form-tel input::-moz-placeholder {
+      font-size: 18px;
+      line-height: 25px;
+      color: white;
+    }
+
+    &--form-button {
+      position: absolute;
+      top: 195px;
+      z-index: 5;
+
+      width: 100%;
+      margin: 0;
+    }
+  
+    &--form-check {
+      margin: 20px 0 0 0;
+    }
+  }
+}
+
+.types-of-repair {
+  height: 820px;
+  width: 100%;
+
+  &--head{
+    margin: 0 auto;
+    height: 107px;
+    width: 198px;
+    font-family: "Yeseva One";
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  &--head-icon {
+    margin-top: 10px;
+  }
+
+  &--content {
+    display: flex;
+
+    width: 100%;
+    padding: 0 5% 0 5%;
+    justify-content: space-around;
+  }
+
+  &--column,
+  &--image {
+    position: relative;
+  }
+
+  &--list-container {
+    position: absolute;
+    top: 300px;
+    left: 35px;
+    width: 83%;
+    height: 286px;
+    padding: 20px 0 0 30px;
+    z-index: 2;
+
+    background: white;
+  }
+
+  &--list-container-text{
+    font-family:"Yeseva One";
+    font-size: 18px;
+    line-height: 25px;
+    color: #363636;
+  }
+
+  &--list {
+    padding-left: 15px;
+
+    font-family:"FuturaBookC";
+    font-size: 15px;
+    line-height: 25px;
+
+    color: #959595;
+  }
+
+  &--price {
+    width: 228px;
+    height: 54px;
+    position: absolute;
+    padding-top: 15px;
+    top: 550px;
+    left: 35px;
+
+    font-family:"Yeseva One";
+    font-size: 18px;
+    line-height: 25px;
+    color: white;
+    text-align: center;
+    vertical-align: center;
+    z-index: 2;
+
+    background: $mainColor;
+  }
+
+  &--image2 img:last-child {
+    display: none;
+  }
+
+  @media screen and (max-width: 1170px) {
+    &--content {
+      justify-content: space-between;
+      padding: 0;
+    }
+
+    &--column {
+      width: 33%;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    height: 1999px;
+
+    &--content {
+      flex-direction: column;
+    }
+
+    &--column {
+      margin: 0 auto 200px;
+      width: auto;
+    }
+  }
+
+  @media screen and (max-width: 475px) {
+    height: 1808px;
+    width: 100%;
+    padding-top: 80px;
+
+    &--content {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+  
+      width: 90%;
+      margin: 0 auto;
+      padding: 0 5% 0 5%;
+    }
+
+    &--head {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    &--column {
+      margin-bottom: 120px;
+    }
+
+    &--image img {
+      transform: scale(0.88);
+    }
+  
+    &--list-container {
+      top: 250px;
+      left: 23px;
+      width: 70%;
+      height: 236px;
+      padding: 20px 0 0 30px;
+      z-index: 2;
+  
+      background: white;
+      box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+    }
+  
+    &--list-container-text{
+      font-size: 15px;
+      line-height: 21px;
+    }
+  
+    &--list {
+      font-size: 13px;
+      line-height: 22px;
+    }
+  
+    &--price {
+      width: 190px;
+      height: 40px;
+      position: absolute;
+      padding-top: 10px;
+      top: 465px;
+      left: 23px;
+
+      font-size: 15px;
+      line-height: 21px;
+      font-weight: 100;
+    }
+
+    &--image2 img:first-child {
+      display: none;
+    }
+
+    &--image2 img:last-child {
+      display: block;
+    }
+  }
+}
+
+.free-departure-request {
+  display: flex;
+  justify-content: space-between;
+
+  height: 725px;
+  width: 100%;
+
+  &--picture-section {
+    width: 691px;
+  }
+
+  &--circle {
+    position: relative;
+    height: 636px;
+    width: 700px;
+    top: -600px;
+    left: -200px;
+
+    border: 3px solid $mainColor;
+    border-radius: 50%;
+
+    font-family:"FuturaMediumC";
+    font-size: 18px;
+    line-height: 21px;
+    color: #363636;
+  }
+
+  &--circle-1 {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 70px;
+    left: 570px;
+    width: 450px;
+    align-items: center;
+  }
+
+  &--circle-2 {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 180px;
+    left: 644px;
+    width: 420px;
+    align-items: center;
+  }
+
+  &--circle-3 {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 330px;
+    left: 662px;
+    width: 420px;
+    align-items: center;
+  }
+
+  &--circle-4 {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 490px;
+    left: 585px;
+    width: 420px;
+    align-items: center;
+  }
+
+  &--inside-circle {
+    width: 60px;
+    height: 60px;
+    padding-top: 10px;
+    flex: 0 0 60px;
+
+    text-align: center;
+
+    border-radius: 50%;
+    border: 9px solid white;
+    color: white;
+
+    background: $mainColor;
+  }
+
+  &--form-section {
+    width: 35.2%;
+    padding-top: 125px;
+
+    color: white;
+  }
+
+  &--form-container {
+    width: 100%;
+    height: 506px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background: $someBlack;
+
+    text-align: center;
+  }
+
+  &--form-text-container {
+    width: 290px;
+    margin: 0 auto;
+
+    font-family:"FuturaDemiC";
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  &--form {
+    width: 85%;
+    margin: 0 auto;
+    text-align: start;
+  }
+
+  &--name-container,
+  &--tel-container,
+  &--mail-container {
+    padding-top: 35px;
+    width: 100%;
+    text-align: start;
+
+    font-family:"FuturaBookC";
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  &--name-container input,
+  &--tel-container input,
+  &--mail-container input {
+    width: 100%;
+
+    font-family:"FuturaMediumC";
+    font-size: 18px;
+    line-height: 25px;
+    color: white;
+    border: none;
+
+    background: $someBlack;
+  }
+
+  &--name-container input::-webkit-input-placeholder {
+    color: white;
+  } 
+  &--name-container input::-moz-placeholder {
+    color: white;
+  }
+
+  &--tel-container input::-webkit-input-placeholder {
+    color: white;
+  } 
+  &--tel-container input::-moz-placeholder {
+    color: white;
+  }
+
+  &--mail-container input::-webkit-input-placeholder {
+    color: white;
+  } 
+  &--mail-container input::-moz-placeholder {
+    color: white;
+  }
+
+  &--form-checkbox {
+    margin-top: 25px;
+    padding-left: 20px;
+
+    font-family:"FuturaBookC";
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+  }
+
+  &--form-checkbox input {
+    position: absolute;
+    appearance: none;
+  }
+
+  &--form-checkbox input:checked + &--checkbox {
+    background-image: url('./assets/images/checked.svg');
+  }
+
+  &--checkbox {
+    position: absolute;
+    margin-left: -20px;
+    width: 1em;
+    height: 1em;
+    background-image: url(./assets/images/notChecked.svg);
+  }
+
+  &--button {
+    width: 213px;
+    height: 51px;
+    margin: 50px 0 0 50%;
+
+    font-family:"FuturaBookC";
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    border: none;
+
+    background: $mainColor;
+  }
+
+  &--button:hover {
+    cursor: pointer;
+    color: black;
+  }
+
+  &--foot {
+    display: flex;
+
+    align-items: center;
+    width: 350px;
+
+    font-family: "FuturaDemiC";
+    font-size: 20px;
+    line-height: 25px;
+    color: $mainColor;
+    text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+  }
+
+  &--foot img {
+    margin-top: 13px;
+  }
+
+  @media screen and (max-width: 1240px) {
+    &--picture-section {
+      display: none;
+    }
+
+    &--form-section {
+      width: 350px;
+      margin: 0 auto;
+    }
+
+    &--button {
+      margin: 10% 0 0 10%;
+    }
+  }
+
+  @media screen and (max-width: 475px) {
+    display: none;
+  }
+}
+
+.wildest-fantasies {
+  display: flex;
+
+  width: 100%;
+  height: 1146px;
+
+  background: url(./assets/images/wildestfantasies.png) no-repeat;
+  background-position-y: 243px;
+
+  &--slider {
+    display: none;
+  }
+
+  &--list-container {
+    width: 30%;
+    padding: 26% 0 0 7%;
+  }
+
+  &--list-head {
+    width: 80%;
+    
+    font-family:"Yeseva One";
+    font-size: 27px;
+    line-height: 37px;
+    color: $mainColor;
+  }
+
+  &--photo-container {
+    width: 70%;
+  }
+
+  &--list {
+    padding-top: 45px;
+
+    font-family: "ProximaNova";
+    font-size: 19px;
+    line-height: 49px;
+    font-weight: 100;
+    color: white;
+    list-style: none;
+  }
+
+  &--list-item:hover {
+    text-decoration: underline;
+    text-decoration-color: $mainColor;
+    color: $mainColor;
+    cursor: pointer;
+  }
+
+  &--photo-container {
+    position: relative;
+  }
+
+  &--photo-1{
+    position: absolute;
+    top: 200px;
+    left: 150px;
+  }
+
+  &--photo-2{
+    position: absolute;
+    top: 130px;
+    left: 550px;
+  }
+
+  &--photo-3{
+    position: absolute;
+    top: 800px;
+    left: 150px;
+  }
+
+  &--photo-4{
+    position: absolute;
+    top: 440px;
+    left: 550px;
+  }
+
+  @media screen and (max-width: 1250px) {
+    &--photo-2,
+    &--photo-4 {
+      display: none;
+    }
+    background-position-y: 150px;
+
+    &--photo-1 {
+      top: 110px;
+      left: 250px;
+    }
+
+    &--photo-3 {
+      top: 710px;
+      left: 250px;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    &--photo-1 {
+      top: 110px;
+      left: 170px;
+    }
+
+    &--photo-3 {
+      top: 710px;
+      left: 170px;
+    }
+  }
+    
+  @media screen and (max-width: 768px) {
+    background-position-y: 100px;
+    height: 1000px;
+
+    &--list-container {
+      padding-left: 5px;
+    }
+
+    &--photo-1 {
+      top: 60px;
+      left: 0px;
+    }
+
+    &--photo-3 {
+      top: 660px;
+      left: 0px;
+    }
+
+    &--list-head {
+      width: 100%;
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+    &--list {
+      width: 100%;
+      font-size: 16px;
+      line-height: 40px;
+    }
+  }
+
+  @media screen and (max-width: 475px) {
+    height: 220px;
+    padding-top: 5px;
+    
+    background: none;
+    background: white;
+
+    &--slider {
+      display: block;
+      position: relative;
+
+      margin-top: 30px;
+    }
+
+    &--slider-left {
+      position: absolute;
+      top: 100px;
+      left: 17px;
+    }
+
+    &--slider-right {
+      position: absolute;
+      top: 100px;
+      left: 290px;
+    }
+
+    &--slider-left:hover {
+      cursor: pointer;
+    }
+
+    &--slider-right:hover {
+      cursor: pointer;
+    }
+  
+    &--list-container {
+      width: 90%;
+
+      padding: 0;
+      margin: 0 auto;
+   }
+
+    &--list-head {
+      width: 70%;
+      margin: 0 auto;
+    
+      font-family:"Yeseva One";
+      font-size: 22px;
+      line-height: 30px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &--list,
+    &--photo-container {
+      display: none;
+    }
+  }
+}
+
+.design-projects {
+  height: 580px;
+  width: 100%;
+  
+  font-family: "Yeseva One";
+
+  &--head {
+    text-align: center;
+    padding-top: 112px;
+  }
+
+  &--head-text {
+    font-family:"Yeseva One";
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  &--head-icon {
+    margin: 15px 0 20px 0;
+  }
+
+  &--head-paragraph {
+    display: inline-block;
+    width: 50%;
+
+    text-align: center;
+    font-family:"FuturaBookC";
+    font-size: 20px;
+    line-height: 27px;
+    color: #363636;
+  }
+
+  &--content {
+    display: flex;
+
+    width: 100%;
+    padding: 39px 5% 0 5%;
+    justify-content: space-around;
+  }
+
+  &--column,
+  &--image {
+    position: relative;
+  }
+
+  &--list-container-1 {
+    position: absolute;
+    top: 294px;
+    left: 35px;
+    width: 83%;
+    height: 211px;
+    padding: 20px 0 0 30px;
+    z-index: 2;
+
+    background: white;
+  }
+
+  &--list-container-2 {
+    position: absolute;
+    top: 294px;
+    left: 35px;
+    width: 83%;
+    height: 286px;
+    padding: 20px 0 0 30px;
+    z-index: 2;
+
+    background: white;
+  }
+
+  &--list-container-3 {
+    position: absolute;
+    top: 294px;
+    left: 35px;
+    width: 83%;
+    height: 414px;
+    padding: 20px 0 0 30px;
+    z-index: 2;
+
+    background: white;
+  }
+
+  &--text{
+    font-family:"Yeseva One";
+    font-size: 15px;
+    line-height: 25px;
+    color: #363636;
+  }
+
+  &--list {
+    padding-left: 15px;
+
+    font-family:"FuturaBookC";
+    font-size: 15px;
+    line-height: 25px;
+
+    color: #959595;
+  }
+
+  &--price-1 {
+    width: 228px;
+    height: 54px;
+    position: absolute;
+    padding-top: 15px;
+    top: 475px;
+    left: 35px;
+
+    font-family:"Yeseva One";
+    font-size: 18px;
+    line-height: 25px;
+    color: white;
+    text-align: center;
+    vertical-align: center;
+    z-index: 2;
+
+    background: $mainColor;
+  }
+
+  &--price-2 {
+    width: 228px;
+    height: 54px;
+    position: absolute;
+    padding-top: 15px;
+    top: 550px;
+    left: 35px;
+
+    font-family:"Yeseva One";
+    font-size: 18px;
+    line-height: 25px;
+    color: white;
+    text-align: center;
+    vertical-align: center;
+    z-index: 2;
+
+    background: $mainColor;
+  }
+
+  &--price-3 {
+    width: 228px;
+    height: 54px;
+    position: absolute;
+    padding-top: 15px;
+    top: 675px;
+    left: 35px;
+
+    font-family:"Yeseva One";
+    font-size: 18px;
+    line-height: 25px;
+    color: white;
+    text-align: center;
+    vertical-align: center;
+    z-index: 2;
+
+    background: $mainColor;
+  }
+
+  &--image23 img:last-child {
+    display: none;
+  }
+
+  &--list-item>span {
+    display: none;
+  }
+
+  @media screen and (max-width: 1170px) {
+    height: 620px;
+
+    &--content {
+      justify-content: space-between;
+      padding: 0;
+    }
+
+    &--column {
+      width: 33%;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    height: 1999px;
+
+    &--content {
+      flex-direction: column;
+    }
+
+    &--column {
+      margin: 0 auto 200px;
+      width: auto;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    height: 2400px;
+  }
+
+  @media screen and (max-width: 475px) {
+    height: 1960px;
+
+    background: $someBlack;
+
+    &--image23 img:first-child {
+      display: none;
+    }
+
+    &--image23 img:last-child {
+      display: block;
+    }
+
+    &--head {
+      color: white;
+      padding-top: 162px;
+    }
+  
+    &--head-text {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  
+    &--head-icon {
+      margin: 15px 0 20px 0;
+    }
+  
+    &--head-paragraph {
+      display: inline-block;
+      width: 77%;
+  
+      text-align: center;
+      font-family:"FuturaBookC";
+      font-size: 15px;
+      line-height: 20px;
+      color: white;
+    }
+
+
+    &--content {
+      flex-wrap: wrap;
+  
+      padding: 0;
+    }
+  
+    &--column,
+    &--image {
+      position: relative;
+    }
+
+    &--column {
+      margin-bottom: 60px;
+    }
+
+    &--margin {
+      margin-bottom: 120px;
+    }
+
+    &--image img {
+      transform: scale(0.88);
+    }
+  
+    &--list-container-1 {
+      position: absolute;
+      top: 254px;
+      left: 24px;
+      width: 70%;
+      height: 177px;
+      padding: 20px 0 0 30px;
+      z-index: 2;
+  
+      background: white;
+    }
+  
+    &--list-container-2 {
+      position: absolute;
+      top: 254px;
+      left: 24px;
+      width: 70%;
+      height: 241px;
+      padding: 20px 0 0 30px;
+      z-index: 2;
+  
+      background: white;
+    }
+  
+    &--list-container-3 {
+      position: absolute;
+      top: 294px;
+      left: 24px;
+      width: 70%;
+      height: 241px;
+      padding: 20px 0 0 30px;
+      z-index: 2;
+  
+      background: white;
+    }
+
+    &--list-container-3>ul>li:nth-child(7)~li{
+      display: none;
+    }
+
+    &--list-item>span {
+      display: inline;
+    }
+  
+    &--text{
+      font-size: 15px;
+      line-height: 21px;
+      color: #363636;
+    }
+  
+    &--list {
+      padding: 10px 0 0 15px;
+  
+      font-family:"FuturaBookC";
+      font-size: 13px;
+      line-height: 22px;
+  
+      color: #959595;
+    }
+  
+    &--price-1 {
+      width: 190px;
+      height: 40px;
+      padding-top: 10px;
+      top: 410px;
+      left: 24px;
+  
+      font-size: 15px;
+      line-height: 21px;
+    }
+  
+    &--price-2 {
+      width: 190px;
+      height: 40px;
+      padding-top: 10px;
+      top: 475px;
+      left: 24px;
+  
+      font-size: 15px;
+      line-height: 21px;
+    }
+  
+    &--price-3 {
+      width: 190px;
+      height: 40px;
+      padding-top: 10px;
+      top: 515px;
+      left: 24px;
+  
+      font-size: 15px;
+      line-height: 21px;
+    }
+  }
+}
+
+.working {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  height: 1140px;
+  padding: 464px 0 0 5.5%;
+
+  font-family: "Yeseva One";
+  background: $someBlack;
+
+  &--head {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 317px; //337
+    height: 100px;
+    margin-left: -20px;
+  }
+
+  &--head-header{
+    font-family: FuturaDemiC;
+    font-size: 15px;
+    line-height: 21px;
+    color: white;
+  }
+
+  &--head-text {
+    font-size: 27px;
+    line-height: 37px;
+    color: $mainColor;
+  }
+
+  &--head-line {
+    width: 92px;
+    height: 1px;
+    margin: 55px 0 0 31px;
+    background: $mainColor;
+  }
+
+  &--steps {
+    width: 765px;
+    margin-left: 120px;
+  }
+
+  &--list {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 75px;
+
+    list-style: none;
+  }
+
+  &--step {
+    width: 33%;
+    padding-bottom: 30px;
+
+    color: white;
+    opacity: 0.3;
+  }
+
+  &--step:hover {
+    opacity: 1;
+    cursor: pointer;
+    text-decoration-color: rgba(227, 184, 115, 1);
+  }
+
+  &--step-head {
+    font-size: 15px;
+    line-height: 21px;
+
+    text-decoration: underline;
+    text-decoration-color: rgba(227, 184, 115, 0.5);
+  }
+
+  &--step-text {
+    font-family:"FuturaBookC";
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  &--text-container {
+    width: 331px;
+    margin-top: -100px;
+  }
+
+  &--text-container-number {
+    font-size: 18px;
+    line-height: 25px;
+    color: white;
+  }
+
+  &--text-container-step-text {
+    margin-top: 15px;
+
+    font-size: 15px;
+    line-height: 23px;
+    color: $mainColor;
+  }
+
+  &--text-container-text {
+    margin-top: 10px;
+
+    font-family: "FuturaBookC";
+    font-size: 15px;
+    line-height: 25px;
+    color: white;
+  }
+
+  &--picture {
+    margin-left: 170px;
+  }
+
+  &--arrows {
+    width: 287px;
+    margin-top: 80px;
+  }
+
+  &--arrows-fig {
+    display: flex;
+
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &--arrows-fig img:hover {
+    cursor: pointer;
+    transform: rotate(5deg);
+    transition: 1s linear;
+  }
+
+  &--circle {
+    width: 11px;
+    height: 11px;
+
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+  }
+
+  &--circle:hover {
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 838px) {
+    padding-left: 0;
+    &--picture {
+      margin: 0;
+    }
+
+    &--picture>figure>img {
+      width: 94%;
+    }
+  }
+
+  @media screen and (max-width: 1359px) {
+    width: 100%;
+    height: 1500px;
+    flex-direction: column;
+    padding-top: 300px;
+    padding-left: 3%;
+
+    &--steps {
+      margin-left: 50px;
+    }
+
+    &--list {
+      margin-top: 0px;
+    }
+
+    &--text-container {
+      margin: 0 auto ;
+    }
+
+    &--picture {
+      margin: 0 auto;
+    }
+  }
+}
+
+.team {
+  position: relative;
+
+  height: 508px;
+  width: 100%;
+  padding-top: 65px;
+
+  background: $someBlack;
+
+  &--head {
+    width: 456px;
+    margin: 0 auto;
+
+    text-align: center;
+    color: white;
+  }
+
+  &--head-title {
+    font-family:"Yeseva One";
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  &--head-icon {
+    margin: 10px 0 10px 0;
+  }
+
+  &--head-text {
+    font-family:"FuturaBookC";
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 27px;
+  }
+
+  &--workers {
+    display: flex;
+
+    width: 1063px;
+    height: 500px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  &--member {
+    padding-top: 70px;
+  }
+
+  &--member-image {
+    position: relative;
+  }
+
+  &--member-icon {
+    position: absolute;
+    top: -50px;
+    left: -55px;
+
+    width: 70px;
+    height: 70px;
+  }
+
+  &--member-info {
+    position: absolute;
+    z-index: 2;
+
+    top: 290px;
+    left: 20px;
+    width: 85%;
+    height: 130px;
+    padding-top: 20px;
+
+    text-align: center;
+
+    background: white;
+  }
+
+  &--member-name {
+    font-family: "Yeseva One";
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &--member-position {
+    font-family: "FuturaBookC";
+    font-size: 18px;
+    line-height: 26px;
+    color: #959595;
+  }
+
+  &--member-experience {
+    height: 44px;
+    padding-top: 13px;
+    margin-top: 13px;
+
+    font-family: "Yeseva One";
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 100;
+    color: white;
+
+    background: $mainColor;
+  }
+
+  &--info {
+    width: 555px;
+    margin: 40px auto 0;
+
+    font-family: "FuturaBookC";
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+    color: #363636;
+  }
+
+  &--line {
+    margin: 0 auto 10px;
+    width: 60px;
+    height: 3px;
+
+    background: $mainColor;
+  }
+
+  @media screen and (max-width: 1135px) {
+    height: 1900px;
+
+    &--workers {
+      height: 1400px;
+      width: 270px;
+      flex-direction: column;
+    }
+
+    &--info {
+      margin-top: 100px;
+      color: white;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &--info {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 475px) {
+    position: relative;
+
+    height: 1716px;
+    width: 100%;
+    padding-top: 60px;
+
+    background: $someBlack;
+
+    &--info {
+      display: none;
+    }
+
+    &--head {
+      width: 90%;
+
+      color: white;
+    }
+  
+    &--head-title {
+      font-family:"Yeseva One";
+      font-size: 22px;
+      line-height: 30px;
+    }
+  
+    &--head-icon {
+      width: 50%;
+      margin: 10px auto 10px;
+    }
+  
+    &--head-text {
+      font-family:"FuturaBookC";
+      font-size: 15px;
+      font-weight: 100;
+      line-height: 20px;
+    }
+
+    &--workers {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+  
+      width: 90%;
+      height: 500px;
+      margin: 0 auto;
+      justify-content: flex-end;
+    }
+  
+    &--member {
+      padding-top: 120px;
+    }
+  
+    &--member-image {
+      position: relative;
+    }
+  
+    &--member-icon {
+      position: absolute;
+      top: -55px;
+      left: -55px;
+  
+      width: 70px;
+      height: 70px;
+    }
+  
+    &--member-info {
+      position: absolute;
+      z-index: 2;
+  
+      top: 275px;
+      left: 20px;
+      width: 85%;
+      height: 135px;
+      padding-top: 20px;
+  
+      text-align: center;
+  
+      background: white;
+    }
+  
+    &--member-name {
+      font-family: "Yeseva One";
+      font-size: 18px;
+      line-height: 25px;
+    }
+  
+    &--member-position {
+      font-family: "FuturaBookC";
+      font-size: 18px;
+      line-height: 26px;
+      color: #959595;
+    }
+  
+    &--member-experience {
+      height: 44px;
+      padding-top: 13px;
+      margin-top: 19px;
+  
+      font-family: "Yeseva One";
+      font-size: 13px;
+      line-height: 20px;
+      font-weight: 100;
+      color: white;
+  
+      background: $mainColor;
+    }
+  }
+}
+
+.clients {
+  height: 1285px;
+  padding-top: 500px;
+
+  &--head {
+    text-align: center;
+  }
+
+  &--head-title {
+    font-family: "Yeseva One";
+    font-size: 20px;
+    line-height: 28px;
+    color: $someBlack;
+  }
+
+  &--head-image {
+    margin: 12px 0 15px;
+  }
+
+  &--head-text {
+    font-family: "FuturaBookC";
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    color: #363636;
+  }
+
+  &--content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+
+  &--client {
+    position: relative;
+
+    width: 376px;
+    height: 428px;
+    padding: 20px 21px 0;
+
+    border: 1px solid rgba(100, 100, 100, 0.1);
+  }
+
+  &--image {
+    display: flex;
+    vertical-align: middle;
+    padding-bottom: 20px;
+  }
+
+  &--image img {
+    border-radius: 50%;
+  }
+
+  &--image-text {
+    width: 60%;
+    padding: 15px 20px;
+  }
+
+  &--client-head {
+    font-family: "Yeseva One";
+    font-size: 18px;
+    line-height: 23px;
+    color: $someBlack;
+  }
+
+  &--client-text {
+    font-family: "FuturaBookC";
+    font-size: 15px;
+    line-height: 27px;
+    color: #959595;
+  }
+
+  &--down {
+    position: absolute;
+    display: flex;
+
+    width: 294px;
+    height: 54px;
+    top: 400px;
+    left: 0px;
+
+    font-family: "Yeseva One";
+    font-size: 17px;
+    line-height: 56px;
+    color: white;
+  }
+
+  &--down-left {
+    display: flex;
+    flex: 0 0 43%;
+
+    background: $mainColor;
+  }
+
+  &--down-left img {
+    padding: 0 15px;
+  }
+
+  &--down-right {
+    display: flex;
+    flex: 0 0 57%;
+
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    background: $mainColor;
+  }
+
+  &--down-right img {
+    padding: 0 15px;
+  }
+
+  @media screen and (max-width: 1140px) {
+    &--client:nth-child(2) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1135px) {
+    padding-top: 50px;
+    height: 800px;
+  }
+
+  @media screen and(max-width: 768px) {
+    display: none;
+  }
+}
+
+.questions {
+
+  height: 223px;
+  position: relative;
+
+  color: white;
+
+  &--form {
+    position: absolute;
+    z-index: 5;
+
+    left: 20%;
+    width: 883px;
+    height: 445px;
+    text-align: center;
+
+    background: $someBlack;
+  }
+
+  &--form-container {
+    margin: 20px auto 0;
+    height: 377px;
+    width: 520px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &--title-text {
+    width: 100%;
+    font-family: "Yeseva One";
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    margin: 14px 0 20px;
+  }
+
+  &--name {
+    display: flex;
+    flex-direction: column;
+
+    width: 231px;
+    height: 45px;
+
+    text-align: start;
+  }
+
+  &--tel {
+    display: flex;
+    flex-direction: column;
+
+    width: 231px;
+    height: 45px;
+    margin-left: 55px;
+
+    text-align: start;
+  }
+
+  &--question {
+    display: flex;
+    flex-direction: column;
+
+    width: 517px;
+    height: 45px;
+
+    text-align: start;
+  }
+
+  &--name input {
+    font-family: "FuturaBookC";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 100;
+
+    border: none;
+    background: $someBlack;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  &--tel input {
+    font-family: "FuturaBookC";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 100;
+
+    border: none;
+    background: $someBlack;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  &--question input {
+    font-family: "FuturaBookC";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 100;
+
+    border: none;
+    background: $someBlack;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  &--text {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &--name input::-webkit-input-placeholder {
+    color: white;
+    font-family: "FuturaBookC";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 100;
+  } 
+  &--name input::-moz-placeholder {
+    color: white;
+    font-family: "FuturaBookC";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 100;
+  }
+
+  &--tel input::-webkit-input-placeholder {
+    color: white;
+    font-family: "FuturaBookC";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 100;
+  } 
+  &--tel input::-moz-placeholder {
+    color: white;
+    font-family: "FuturaBookC";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 100;
+  }
+
+  &--question input::-webkit-input-placeholder {
+    color: white;
+    font-family: "FuturaBookC";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 100;
+  } 
+
+  &--question input::-moz-placeholder {
+    color: white;
+    font-family: "FuturaBookC";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 100;
+  }
+
+  &--check {
+    width: 486px;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 20px;
+
+    font-family: "FuturaBookC";
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &--check input {
+    position: absolute;
+    appearance: none;
+  }
+
+  &--check input:checked + &--checkbox {
+    background-image: url('./assets/images/checked.svg');
+  }
+
+  &--checkbox {
+    position: absolute;
+    margin-left: -20px;
+    width: 1em;
+    height: 1em;
+    background-image: url(./assets/images/notChecked.svg);
+  }
+
+  &--button {
+    margin: 30px auto 0;
+    width: 200px;
+    height: 51px;
+
+    font-family: "FuturaDemiC";
+    font-size: 15px;
+    line-height: 26px;
+    color: white;
+    font-weight: 100;
+    border: none;
+
+    background: $mainColor;
+  }
+
+  &--button:hover {
+    cursor: pointer;
+    color: $someBlack;
+  }
+
+  @media screen and (max-width: 1135px) {
+    width: 100%;
+    height: 445px;
+    position: static;
+    padding: 0;
+
+    &--form {
+      position: static;
+      margin: 0 auto;
+      padding: 0;
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &--form {
+      margin-top: 100px;
+      width: 100%;
+    }
+
+    &--form-container {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &--question {
+      width: 231px;
+    }
+
+    &--tel {
+      margin: 0 auto;
+    }
+
+    &--check {
+      width: 100%;
+      margin-top: 10px;
+      text-align: start;
+    }
+
+    &--tel {
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width: 475px) {
+    margin-top: -20px;
+    height: 545px;
+    width: 100%;
+    background: $someBlack;
+
+    &--form {
+      position: static;
+  
+      margin: 0 auto;
+      width: 90%;
+      height: 497px;
+  
+      background: $someBlack;
+    }
+  
+    &--form-container {
+      height: 377px;
+      width: 100%;
+      padding-top: 30px;
+  
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  
+    &--title-text {
+      width: 100%;
+      font-family: "Yeseva One";
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+      margin: 14px 0 30px;
+    }
+  
+    &--name {
+      display: flex;
+      flex-direction: column;
+  
+      width: 100%;
+      height: 45px;
+  
+      text-align: start;
+    }
+  
+    &--tel {
+      display: flex;
+      flex-direction: column;
+  
+      width: 100%;
+      height: 45px;
+      margin: 50px 0 0 0;
+  
+      text-align: start;
+    }
+  
+    &--question {
+      display: flex;
+      flex-direction: column;
+  
+      width: 100%;
+      height: 45px;
+      margin-top: 50px;
+  
+      text-align: start;
+    }
+  
+    &--name input {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+    }
+  
+    &--tel input {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+    }
+  
+    &--question input {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+    }
+  
+    &--text {
+      font-family: "FuturaBookC";
+      font-size: 15px;
+      line-height: 20px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  
+    &--check {
+      width: 486px;
+      margin: 15px 0 0 0;
+  
+      text-align: start;
+      font-family: "FuturaBookC";
+      font-size: 16px;
+      line-height: 22px;
+    }
+  
+    &--button {
+      margin: 70px 0 0 0;
+      width: 100%;
+    }
+  }
+}
+
+.background-wrapper {
+  width: 100%;
+  height: 954px;
+
+  padding-top: 274px;
+
+  background: url(./assets/images/background-down.png);
+  background-color: rgba(0, 0, 0, 1);
+
+  @media screen and (max-width: 768px) {
+    margin-top: 100px;
+    height: 600px;
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (max-width: 475px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+
+    width: 100%;
+    height: 485px;
+    padding: 0;
+    margin-top: 0;
+
+    background: none;
+    background: $someBlack;
+  }
+}
+
+.contacts {
+  width: 589px;
+  height: 148px;
+
+  margin: 0 auto;
+  &--text {
+    font-family: "Yeseva One";
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $mainColor;
+  }
+
+  &--text>p>br {
+    display: none;
+  }
+
+  &--icons {
+    display: flex;
+
+    margin: 26px auto 0;
+    width: 71px;
+    justify-content: space-between;
+  }
+
+  &--icons>figure:hover {
+    cursor: pointer;
+    transform: rotateX(360deg);
+    transition: 1s linear;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 475px) {
+    width: 100%;
+    height: 161px;
+
+    &--text {
+      width: 82.6%;
+      margin: 0 auto;
+
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    &--text>p>br {
+      display: initial;
+    }
+
+    &--icons>figure:last-child {
+      margin-left: 30px;
+    }
+
+    &--icons>figure>img {
+      transform: scale(1.4);
+    }
+  }
+}
+
+.map {
+  width: 100%;
+
+  &--figure {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  &--figure img:last-child {
+    display: none;
+  }
+
+  @media screen and (max-width: 960px) {
+    &--figure {
+      width: 90%;
+    }
+
+    &--figure img:first-child {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &--figure {
+      width: 95%;
+    }
+
+    &--figure img:first-child {
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 475px) {
+    &--figure {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &--figure img:first-child {
+      display: none;
+    }
+
+    &--figure img:last-child {
+      display: inline;
+    }
+  }
+
+
+}
+
+.footer {
+  display: flex;
+
+  width: 100%;
+  height: 133px;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 0 5.7% 0 5.7%;
+
+  font-family: "FuturaDemic";
+  font-size: 14px;
+
+  background-color: $someBlack;
+
+  &--logo {
+    color: $mainColor;
+  }
+
+  &--nav {
+    flex: 2;
+    margin: 0 4.65% 0 4.65%;
+
+    font-family: "FuturaBookC";
+  }
+
+  &--list {
+    display: flex;
+
+    justify-content: space-around;
+
+    list-style-type: none;
+  }
+
+  &--list-item {
+    color: white;
+  }
+
+  &--list-item:hover {
+    color: $mainColor;
+    cursor: pointer;
+  }
+
+  &--tel {
+    color: $mainColor;
+  }
+
+  &--button {
+    height: 37px;
+    width: 161px;
+    margin-left: 45px;
+
+    font-size: 13px;
+    border: 0;
+    color: white;
+
+    background-color: $mainColor;
+  }
+
+  &--button:hover {
+    cursor: pointer;
+
+    color: grey;
+
+    background-color: white;
+  }
+
+  @media screen and (max-width: 475px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 1100px) {
+    &--list {
+      justify-content: space-between;
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    &--button {
+    display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &--nav {
+      display: none;
+    }
+
+    &--button {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    &--button {
+      display: none;
+    }
   }
 }
